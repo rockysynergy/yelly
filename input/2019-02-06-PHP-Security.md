@@ -1,6 +1,7 @@
 ---
 layout: post
 title: PHP程序安全
+tags: PHP, Security
 ---
 
 PHP程序的安全隐患主要是涉及到用户输入、cookie和session。以下是编写安全的PHP程序方法：

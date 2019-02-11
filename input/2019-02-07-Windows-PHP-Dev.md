@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Windows PHP开发环境快速搭建
+tags: PHP, Dev
 ---
 
 本文记录了在Windows系统快速搭建PHP开发环境的步骤。

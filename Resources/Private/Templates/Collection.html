@@ -1,0 +1,17 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:for each="{files}" as="file">
+        <article class="post-header">
+            <h2 class="post-title">
+                <a href="{file.html}.html">
+                    {file.html}
+                </a>
+            </h2>
+            <p class="post-meta">
+                更新于：{file.mTime}
+                <f:render partial="TagsPartial.html" arguments="{tags: file.tags}" />
+            </p>
+        </article>
+    </f:for>
+</f:section>

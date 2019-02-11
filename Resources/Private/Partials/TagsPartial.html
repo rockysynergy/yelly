@@ -1,0 +1,12 @@
+
+<f:for each="{tags}" as="tag">
+    <f:if condition="{tag.value} != 'index'">
+        <f:then>
+            <f:cycle values="{0: 'zero', 1: 'one', 2: 'two', 3: 'three'}" as="postfix">
+                <a class="post-category post-category-{postfix}" href="{tag.value}.html">
+                    {tag.label}
+                </a>
+            </f:cycle>
+        </f:then>
+    </f:if>
+</f:for>
