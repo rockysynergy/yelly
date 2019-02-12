@@ -1,4 +1,0 @@
-# The JsonDb configuration
-json_db:
-  root: 'data'
-  filename: 'yelly_db.json'
