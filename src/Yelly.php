@@ -180,7 +180,14 @@ class Yelly {
     /**
      * Write collection file
      */
-    protected function writeCollectionPage($filename, array $articles) {                 
+    protected function writeCollectionPage($filename, array $articles) { 
+        usort($articles, function($a, $b) {
+            $aMtime = new \DateTime($a['mTime']);
+            $bMtime = new \DateTime($b['mTime']);
+            if ($aMtime < $bMtime) return -1;
+            else if ($aMtime == $bMtime) return 0;
+            else return 1;
+        });
         $content = $this->writer->assemble(['articles' => $articles], 'Collection');
             
         $outPath = $this->outDir . $filename . '.html';
